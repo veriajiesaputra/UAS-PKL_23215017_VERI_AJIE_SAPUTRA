@@ -1,0 +1,24 @@
+.password-toggle-group .password-toggle-btn {
+    border-color: var(--bs-border-color);
+    color: var(--bs-secondary);
+    padding-inline: 0.75rem;
+}
+
+.password-toggle-group .password-toggle-btn:hover,
+.password-toggle-group .password-toggle-btn:focus {
+    color: var(--bs-primary);
+    background-color: var(--bs-light);
+    border-color: var(--bs-border-color);
+}
+
+.password-toggle-group .form-control.is-invalid + .password-toggle-btn {
+    border-color: var(--bs-form-invalid-border-color);
+}
+
+.password-toggle-group .form-control:focus {
+    z-index: 3;
+}
+
+.password-toggle-group .password-toggle-btn {
+    z-index: 4;
+}

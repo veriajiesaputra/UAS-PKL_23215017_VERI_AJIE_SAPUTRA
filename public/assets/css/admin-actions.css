@@ -1,0 +1,262 @@
+.table-action-group {
+    gap: 0.35rem;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    line-height: 1;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.action-btn i {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.action-btn-view {
+    background: rgba(0, 184, 219, 0.14);
+    color: #0891b2;
+}
+
+.action-btn-view:hover {
+    background: #00B8DB;
+    color: #fff;
+}
+
+.action-btn-edit {
+    background: rgba(240, 177, 0, 0.16);
+    color: #b45309;
+}
+
+.action-btn-edit:hover {
+    background: #F0B100;
+    color: #fff;
+}
+
+.action-btn-delete {
+    background: rgba(251, 44, 54, 0.12);
+    color: #dc2626;
+}
+
+.action-btn-delete:hover {
+    background: #FB2C36;
+    color: #fff;
+}
+
+.action-btn-reset {
+    background: rgba(82, 82, 82, 0.1);
+    color: #525252;
+}
+
+.action-btn-reset:hover {
+    background: #525252;
+    color: #fff;
+}
+
+.stat-card-admin {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card-admin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stat-card-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.stat-card-icon i {
+    line-height: 1;
+}
+
+.btn-icon .sidebar-toggle-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    max-width: 100%;
+}
+
+.table-responsive > .table {
+    margin-bottom: 0;
+}
+
+.table-responsive-scroll-y {
+    max-height: 420px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+@media (max-width: 991.98px) {
+    .card:has(> .table-responsive) {
+        overflow: visible;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: visible;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .table-responsive > .table {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .table-responsive-scroll-y {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .table-responsive::after {
+        content: "Geser ke samping untuk melihat kolom lainnya";
+        display: block;
+        padding: 0.625rem 1rem;
+        font-size: 0.75rem;
+        color: #737373;
+        text-align: center;
+        background: #f5f5f5;
+        border-top: 1px solid #e5e5e5;
+    }
+}
+
+/* ── PREMIUM ADMIN PANEL OVERRIDES (Purple & Red Theme) ── */
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #0c0415 !important;
+    border-right: 1px solid rgba(162, 28, 175, 0.15) !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.sidebar .logo-area {
+    border-bottom: 1px solid rgba(162, 28, 175, 0.15) !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.sidebar .nav-link {
+    color: #9ca3af !important;
+    border-radius: 12px !important;
+    margin: 0.2rem 1rem !important;
+    padding: 0.75rem 1rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(162, 28, 175, 0.15) !important;
+    color: #f43f5e !important;
+}
+
+.sidebar .nav-link.active {
+    background: linear-gradient(135deg, #701a75 0%, #be185d 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(186, 30, 104, 0.25) !important;
+}
+
+.sidebar .nav-link i {
+    font-size: 1.2rem !important;
+    margin-right: 0.75rem !important;
+}
+
+.sidebar .nav-text {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.sidebar small.nav-text {
+    color: rgba(244, 63, 94, 0.5) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Topbar glassmorphism */
+.topbar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(162, 28, 175, 0.12) !important;
+}
+
+/* Avatars using red onion gradient */
+.avatar.bg-primary {
+    background: linear-gradient(135deg, #701a75 0%, #be185d 100%) !important;
+}
+
+/* Page titles */
+h1, h2, h3, h4, h5, h6, .page-header-title {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Cards & Tables */
+.card {
+    border-radius: 18px !important;
+    border: 1px solid rgba(162, 28, 175, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+    overflow: hidden !important;
+}
+
+.card-header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(162, 28, 175, 0.08) !important;
+}
+
+.table th {
+    background-color: #fdf2f8 !important;
+    color: #701a75 !important;
+    font-weight: 600 !important;
+}
+
+/* Action button view */
+.action-btn-view {
+    background: rgba(162, 28, 175, 0.1) !important;
+    color: #a21caf !important;
+}
+.action-btn-view:hover {
+    background: #a21caf !important;
+    color: #fff !important;
+}
+
+/* Sidebar toggle buttons active color */
+#toggleBtn:hover, #mobileBtn:hover {
+    color: #be185d !important;
+    background-color: #fdf2f8 !important;
+}
+
+/* Global button success in admin */
+.btn-primary {
+    background: linear-gradient(135deg, #701a75 0%, #be185d 100%) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(186, 30, 104, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background: linear-gradient(135deg, #4a044e 0%, #9d174d 100%) !important;
+    box-shadow: 0 6px 15px rgba(74, 4, 78, 0.3) !important;
+}
+

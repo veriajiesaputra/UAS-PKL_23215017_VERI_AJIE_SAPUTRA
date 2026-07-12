@@ -1,0 +1,6 @@
+# Blokir eksekusi skrip di folder upload gambar target
+<FilesMatch "\.(php|phtml|php3|php4|php5|phar|pl|py|jsp|asp|aspx|sh|cgi)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes

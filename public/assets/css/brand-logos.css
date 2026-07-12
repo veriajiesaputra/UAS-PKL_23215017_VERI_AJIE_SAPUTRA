@@ -1,0 +1,71 @@
+/* Brand logos: DPKP Brebes | SIPATAN */
+
+.brand-logos-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.brand-logo {
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-logo-dpkp {
+    border-radius: 0;
+    background: transparent;
+}
+
+.brand-logo-sipatan {
+    background: transparent;
+}
+
+.brand-logos-divider {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: rgba(109, 40, 217, 0.35);
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.brand-logos-light .brand-logos-divider {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.brand-logos-sm .brand-logos-divider {
+    font-size: 1rem;
+}
+
+.brand-logos-lg .brand-logos-divider {
+    font-size: 1.5rem;
+}
+
+.landing-nav .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Sidebar admin */
+.sidebar .logo-area .brand-logos-inner {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.sidebar .brand-logos-sm .brand-logo-dpkp {
+    height: 28px !important;
+}
+
+.sidebar .brand-logos-sm .brand-logo-sipatan {
+    height: 24px !important;
+}
+
+.sidebar .brand-logos-sm .brand-logos-divider {
+    font-size: 0.85rem;
+    height: 24px !important;
+}

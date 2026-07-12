@@ -1,0 +1,170 @@
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,.45);
+	backdrop-filter: blur(1px);
+	display: none;
+	z-index: 1035;
+}
+.overlay.show {
+	display: block;
+}
+.sidebar {
+	width: 240px;
+	background: $white;
+	transition: width .3s, left .3s;
+  border-right: 1px solid $gray-200;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 60px;
+	z-index: 1040;
+	.nav-link {
+		color: $gray-800;
+		padding: 8px 10px;
+		display: flex;
+		align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+		gap: 12px;
+		white-space: nowrap;
+    margin: 1px 12px;
+    border-radius: 8px;
+
+		&:hover {
+			color: $primary;
+      background-color: rgba($primary, 0.095);
+		}
+			&.active {
+			color: $primary;
+      background-color: rgba($primary, 0.095);
+		}
+    .ti {
+      font-size: 18px;
+    }
+	}
+	.nav-text {
+		transition: opacity .2s;
+	}
+	.logo-area {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 60px;
+		width: 100%;
+		background: $white;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding-left: 17px;
+		color: $gray-800;
+    border-bottom: 1px solid $gray-200;
+	}
+}
+.sidebar.collapsed {
+	width: 60px;
+	.nav-link{
+		margin: 0 0px;
+		background-color: transparent;
+		padding: 8px 18px;
+	}
+	.nav-text {
+		display: none;
+	}
+	.logo-text {
+		display: none;
+	}
+}
+.topbar {
+	height: 60px;
+	margin-left: 240px;
+	z-index: 1050;
+}
+.topbar.full {
+	margin-left: 60px;
+}
+.content {
+	margin-left: 240px;
+	// transition: margin-left .3s;
+	// padding: 20px;
+}
+.content.full {
+	margin-left: 60px;
+}
+@media (max-width: 992px) {
+	.sidebar {
+		left: -240px;
+	}
+	.sidebar.mobile-show {
+		left: 0;
+	}
+	.topbar {
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
+	.content {
+		margin-left: 0 !important;
+		max-width: 100%;
+		overflow-x: clip;
+	}
+}
+
+// Wide tables: horizontal scroll on mobile
+.table-responsive {
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior-x: contain;
+	max-width: 100%;
+
+	> .table {
+		margin-bottom: 0;
+	}
+}
+
+.table-responsive-scroll-y {
+	max-height: 420px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+@media (max-width: 991.98px) {
+	.card:has(> .table-responsive) {
+		overflow: visible;
+	}
+
+	.table-responsive {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		overflow-y: visible;
+		border-bottom: 1px solid $gray-200;
+
+		> .table {
+			width: max-content;
+			min-width: 100%;
+		}
+	}
+
+	.table-responsive-scroll-y {
+		overflow-x: auto;
+		overflow-y: auto;
+	}
+
+	.table-responsive::after {
+		content: "Geser ke samping untuk melihat kolom lainnya";
+		display: block;
+		padding: .625rem 1rem;
+		font-size: .75rem;
+		color: $gray-500;
+		text-align: center;
+		background: $gray-100;
+		border-top: 1px solid $gray-200;
+	}
+}
+
+
+@import "./avatar";
+@import "./button";
+@import "./icon-shape";
+@import "./utilities";
