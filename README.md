@@ -33,25 +33,6 @@ Aplikasi ini hadir dengan desain antarmuka modern yang responsif dan memukau:
 - **ApexCharts** (Grafik analitik tren dan distribusi)
 - **MySQL / MariaDB**
 
-## Struktur Direktori Penting
-```
-app/
-├── Http/
-│   ├── Controllers/Admin/   # Dashboard, Gejala, Penyakit, Hama, Rule, User
-│   ├── Controllers/         # Diagnosis, Landing, Riwayat, Profile
-│   ├── Middleware/          # RoleMiddleware
-│   └── Requests/            # Form request validation
-└── Models/                  # Gejala, Penyakit, Hama, RiwayatDeteksi, Rule, RuleDetail, User
-
-public/assets/               # Aset kustom CSS, JS, fonts, dan gambar pertanian
-resources/views/
-├── template_backend/        # Layout dashboard & partials (navbar, sidebar, footer)
-├── components/              # Komponen reusable (page-header, stat-card, dll)
-├── admin/                   # CRUD admin panel
-├── auth/                    # Halaman login/register (Bootstrap split-screen)
-└── landing/                 # Landing page & sub-halaman publik
-```
-
 ## Panduan Instalasi
 1. Clone repositori ini.
 2. Install dependensi composer:
