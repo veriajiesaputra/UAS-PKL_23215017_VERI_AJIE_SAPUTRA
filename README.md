@@ -73,4 +73,3 @@ Aplikasi ini hadir dengan desain antarmuka modern yang responsif dan memukau:
 | Role     | Email                   | Password   |
 | -------- | ----------------------- | ---------- |
 | Admin    | `admin@sipatan.test`    | `password` |
-| Petugas  | `petugas@sipatan.test`  | `password` |
